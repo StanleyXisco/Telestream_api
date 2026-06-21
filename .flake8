@@ -1,0 +1,13 @@
+[flake8]
+# Tell flake8 to completely ignore these directories
+exclude = 
+    venv,
+    .git,
+    __pycache__,
+    postgres_data,
+    .pytest_cache
+
+# Adjust parameters to be more forgiving for now
+max-line-length = 127
+max-complexity = 10
+extend-ignore = E203, W503
