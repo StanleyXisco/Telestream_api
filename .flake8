@@ -6,6 +6,7 @@ exclude =
     __pycache__,
     postgres_data,
     .pytest_cache
+    migrations
 
 # Adjust parameters to be more forgiving for now
 max-line-length = 127
