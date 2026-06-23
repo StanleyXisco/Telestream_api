@@ -9,6 +9,6 @@ exclude =
     migrations
 
 # Adjust parameters to be more forgiving for now
-max-line-length = 127
+max-line-length = 175
 max-complexity = 10
 extend-ignore = E203, W503
