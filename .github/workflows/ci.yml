@@ -60,4 +60,4 @@ jobs:
         REDIS_URL: redis://localhost:6379/0
         SECRET_KEY: ${{ secrets.APP_SECRET_KEY }}
       run: |
-        alembic upgrade head
+        python -m alembic upgrade head
