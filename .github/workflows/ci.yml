@@ -2,7 +2,7 @@ name: Continuous Integration
 
 on:
   push:
-    branches: [ main, data-ingestion ]
+    branches: [ main, feature/data-ingestion ]
   pull_request:
     branches: [ main ]
 
