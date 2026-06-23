@@ -9,6 +9,7 @@ class Vehicle(Base):
 
     id = Column(String, primary_key=True, index=True)  # e.g., "vehicle_101"
     driver_name = Column(String, nullable=False)
+    status = Column(String, default="active")  # e.g., "active", "inactive", "maintenance"
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
 
@@ -21,5 +22,8 @@ class LocationLog(Base):
     # PostGIS Geometry column representing a point (Longitude, Latitude)
     # srid=4326 is the spatial reference system identifier for standard global GPS coordinates
     coordinates = Column(Geometry(geometry_type='POINT', srid=4326), nullable=False)
+
+    # Added from new schema to make telemetry data realistic
+    speed = Column(Integer, nullable=True)  # Stored in km/h or mph
 
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
